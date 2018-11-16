@@ -16,13 +16,15 @@
 int main(int argc, char* argv[]){
     srand(time(NULL));
     int is_n = 1;    
-    for(int i = 0 ; i < strlen(argv[1]) ; i++){
-        if(!(isalnum(argv[1][i]) && argv[1][i] != '-' )|| isalpha(argv[1][i])){
-	    is_n = 0;
+    for(unsigned int i = 0 ; i < strlen(argv[1]) ; i++){
+        if(!isalnum(argv[1][i]) || isalpha(argv[1][i])){
+	   if(i == 0 && argv[1][i] != '-'){
+		is_n = 0;
+	   }
 	}
     }
     long mil = 0;
-    if(is_n){
+    if(is_n){    
         sscanf(argv[1], "%ld", &mil);
 	if(mil <= 0){
 	    fprintf(stderr, "Error: delay (%ld) is invalid.", mil);

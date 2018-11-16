@@ -24,7 +24,7 @@ Racer * make_racer( char *name, int row ){
     graph[0] = '~';
     graph[1] = 'O';
     graph[2] = '=';
-    int i = 0;
+    unsigned int i = 0;
     while(i < MAX_NAME_LEN + 1){
 	if(i < strlen(name)){
 	    graph[i + 3] = name[i];
@@ -66,4 +66,5 @@ void *run( void *racer ){
         refresh();
 	pthread_mutex_unlock(&mymutex);
     }
+    return NULL;
 }

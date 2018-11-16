@@ -1,0 +1,5 @@
+commit 2b2b9833a971ab50ada8897cf0a2aaf6ffcae389 (HEAD -> master, origin/master)
+Author: Giovana Puccini <gxp6079@g.rit.edu>
+Date:   Thu Nov 15 20:50:12 2018 -0500
+
+    basic functionality but memory leaks
